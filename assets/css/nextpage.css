@@ -7,7 +7,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Menggunakan min-height agar konten tidak terpotong saat konten terlalu besar */
 }
 
 .form {
@@ -25,8 +25,8 @@ body {
     border: 2px solid var(--main-color);
     box-shadow: 4px 4px var(--main-color);
     align-items: center;
-    max-width: 400px;
     width: 100%;
+    max-width: 400px;
 }
 
 .title {
@@ -71,28 +71,28 @@ body {
 
 .button-log {
     cursor: pointer;
-    width: 40px;
-    height: 40px;
+    width: 30px; /* Ukuran tombol yang lebih kecil */
+    height: 30px; /* Ukuran tombol yang lebih kecil */
     border-radius: 100%;
     border: 2px solid var(--main-color);
     background-color: var(--bg-color);
-    box-shadow: 4px 4px var(--main-color);
+    box-shadow: 2px 2px var(--main-color); /* Mengurangi ukuran shadow */
     color: var(--font-color);
-    font-size: 25px;
+    font-size: 18px; /* Ukuran font yang lebih kecil */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .icon {
-    width: 24px;
-    height: 24px;
+    width: 20px; /* Ukuran ikon yang lebih kecil */
+    height: 20px; /* Ukuran ikon yang lebih kecil */
     fill: var(--main-color);
 }
 
 .button-log:active, .button-confirm:active {
     box-shadow: 0px 0px var(--main-color);
-    transform: translate(3px, 3px);
+    transform: translate(1px, 1px); /* Mengurangi jarak transform */
 }
 
 .button-confirm {
@@ -113,16 +113,16 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    padding: 0 10px;
+    gap: 5px; /* Mengurangi jarak antara ikon dan teks */
+    padding: 5px 10px; /* Mengurangi padding */
     color: white;
-    text-shadow: 2px 2px rgb(116, 116, 116);
+    text-shadow: 1px 1px rgb(116, 116, 116); /* Mengurangi bayangan teks */
     text-transform: uppercase;
     cursor: pointer;
     border: solid 2px black;
     letter-spacing: 1px;
     font-weight: 600;
-    font-size: 17px;
+    font-size: 14px; /* Ukuran font yang lebih kecil */
     background-color: hsl(0, 0%, 22%);
     border-radius: 50px;
     position: relative;
@@ -158,12 +158,40 @@ button:hover svg {
 }
 
 button:hover .now {
-    transform: translateX(10px);
+    transform: translateX(5px); /* Mengurangi jarak transisi */
     transition-delay: 300ms;
 }
 
 button:hover .play {
-    transform: translateX(130%);
+    transform: translateX(65%); /* Mengurangi jarak transisi */
     transition-delay: 300ms;
 }
 
+/* Media Query untuk Layar yang Lebih Kecil */
+@media only screen and (max-width: 600px) {
+    .form {
+        padding: 10px; /* Mengurangi padding untuk layar yang lebih kecil */
+    }
+
+    .title {
+        font-size: 18px; /* Ukuran judul yang lebih kecil */
+        margin-bottom: 20px; /* Mengurangi margin-bottom untuk judul */
+    }
+
+    .title span {
+        font-size: 15px; /* Ukuran teks subjudul yang lebih kecil */
+    }
+
+    .input {
+        height: 35px; /* Mengurangi tinggi input */
+        font-size: 14px; /* Ukuran font input yang lebih kecil */
+        padding: 5px 8px; /* Mengurangi padding input */
+        margin-top: 8px; /* Mengurangi margin-top input */
+        margin-bottom: 8px; /* Mengurangi margin-bottom input */
+    }
+
+    .button-log {
+        width: 25px; /* Ukuran tombol login yang lebih kecil */
+        height: 25px; /* Ukuran tombol login yang lebih */
+    }
+}
