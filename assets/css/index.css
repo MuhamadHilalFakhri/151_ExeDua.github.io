@@ -9,6 +9,18 @@ h1, h2 {
 
 .media-container {
     margin-bottom: 40px;
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.audio-container,
+.video-container,
+.image-container {
+    margin-bottom: 40px;
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
 }
 
 audio, video, img {
