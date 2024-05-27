@@ -132,7 +132,7 @@ button {
 
 button:active {
     transform: scale(0.9);
-    transition: all 100ms ease;
+    transition: all 200ms ease;
 }
 
 button svg {
@@ -143,6 +143,8 @@ button svg {
 .play {
     transition: all 0.5s ease;
     transition-delay: 300ms;
+    text-align: center;
+    
 }
 
 button:hover svg {
@@ -158,13 +160,17 @@ button:hover svg {
 }
 
 button:hover .now {
-    transform: translateX(5px); /* Mengurangi jarak transisi */
+    transform: translateX(80%); /* Mengurangi jarak transisi */
     transition-delay: 300ms;
 }
 
 button:hover .play {
-    transform: translateX(65%); /* Mengurangi jarak transisi */
+    transform: translateX(130%); /* Mengurangi jarak transisi */
     transition-delay: 300ms;
+}
+
+.button-clicked .now {
+    transform: translateX(80%);
 }
 
 /* Media Query untuk Layar yang Lebih Kecil */
