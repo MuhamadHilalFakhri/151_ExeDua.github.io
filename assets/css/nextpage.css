@@ -56,6 +56,8 @@ body {
     padding: 5px 10px;
     outline: none;
     box-sizing: border-box; /* Menambahkan border dan padding ke width */
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .input::placeholder {
@@ -65,12 +67,6 @@ body {
 
 .input:focus {
     border: 2px solid var(--input-focus);
-}
-
-.login-with {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
 }
 
 .button-log {
@@ -127,7 +123,7 @@ button {
     letter-spacing: 1px;
     font-weight: 600;
     font-size: 17px;
-    background-color: hsl(49deg 98% 60%);
+    background-color: hsl(0, 0%, 22%);
     border-radius: 50px;
     position: relative;
     overflow: hidden;
@@ -170,3 +166,4 @@ button:hover .play {
     transform: translateX(130%);
     transition-delay: 300ms;
 }
+
