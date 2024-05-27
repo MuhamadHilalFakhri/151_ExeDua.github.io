@@ -6,6 +6,9 @@ body {
 h1, h2 {
     margin-top: 20px;
 }
+h1{
+    text-align: center;
+}
 
 .media-container {
     margin-bottom: 40px;
