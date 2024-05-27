@@ -1,7 +1,9 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
+    background: #73b1c1; 
 }
+
 
 h1, h2 {
     margin-top: 20px;
@@ -15,6 +17,8 @@ h1{
     border: 2px solid #ccc;
     padding: 20px;
     border-radius: 5px;
+    border-color: black ;
+    
 }
 
 .audio-container,
@@ -29,20 +33,43 @@ h1{
 audio, video, img {
     display: block;
     margin-top: 10px;
+    border-radius: 5px;
 }
 
 button {
-    margin-top: 20px;
-    margin-bottom: 30px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-family: inherit;
     cursor: pointer;
-    float: right;
-    height: 60px;
-}
+    font-weight: 500;
+    font-size: 17px;
+    padding: 0.8em 1.3em 0.8em 0.9em;
+    color: white;
+    background: #ad5389;
+    background: linear-gradient(to right, #0f296c, #2a1eac, #15154c);
+    border: none;
+    letter-spacing: 0.05em;
+    border-radius: 16px;
+  }
+  
+  button svg {
+    margin-right: 3px;
+    transform: rotate(30deg);
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  
+  button span {
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  
+  button:hover svg {
+    transform: translateX(5px) rotate(90deg);
+  }
+  
+  button:hover span {
+    transform: translateX(7px);
+  }
+  
 /* Media Queries */
 @media only screen and (max-width: 600px) {
     .media-container {
